@@ -11,12 +11,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BG */
-
 .bg {
   background: url('/warframe/bg.jpg');
 }
-
 
 .warf-glass {
   background-color: rgba(255, 255, 255, 0.2);
