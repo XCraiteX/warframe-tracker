@@ -1,0 +1,7 @@
+pydantic
+pydantic[email]
+sqlalchemy
+fastapi
+bcrypt
+aiosqlite
+uvicorn
