@@ -1,10 +1,10 @@
 'use client';
-import Frame from '@/components/warframe/Frame';
+import Frame from '@/components/Frame';
 import { API_URL } from '@/config';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { FrameRequestProps } from '@/interfaces/warframe/frame.request';
-import { FrameProps } from '@/interfaces/warframe/frame.props';
+import { FrameRequestProps } from '@/interfaces/frame.request';
+import { FrameProps } from '@/interfaces/frame.props';
 
 export default function Home() {
   const [data, setData] = useState<null | FrameRequestProps>(null);
@@ -35,6 +35,7 @@ export default function Home() {
           {data &&
             data?.warframes.map((frame: FrameProps) => (
               <Frame
+                id={frame.id}
                 key={frame.name}
                 name={frame.name}
                 warframe={frame.warframe}

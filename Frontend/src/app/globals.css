@@ -1,22 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #000;
+  --foreground: #fff;
 }
 
 body {
@@ -31,9 +17,6 @@ body {
   background: url('/warframe/bg.jpg');
 }
 
-#avatar {
-  background: url('https://avatars.mds.yandex.net/i?id=70580b601f0ae1047d1a99d20294fe6f_l-10677603-images-thumbs&n=13');
-}
 
 .warf-glass {
   background-color: rgba(255, 255, 255, 0.2);

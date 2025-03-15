@@ -1,6 +1,6 @@
 'use client';
-import Background from '@/components/warframe/Background';
-import Header from '@/components/warframe/Header';
+import Background from '@/components/Background';
+import Header from '@/components/Header';
 import { MdOutlineSwapHoriz } from 'react-icons/md';
 import { FaUser } from 'react-icons/fa';
 import { FaKey } from 'react-icons/fa';
@@ -33,7 +33,7 @@ export default function Home() {
     );
 
     if (response.data.status == 'OK') {
-      router.push('/warframe/frames');
+      router.push('/frames');
     } else {
       setStatus(response.data.status);
     }
@@ -47,7 +47,7 @@ export default function Home() {
         <form className="flex flex-col gap-3 p-4 warf-glass rounded-md mt-12 h-fit">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl">Вход</h2>
-            <Link href="/warframe/registration">
+            <Link href="/registration">
               <MdOutlineSwapHoriz size={40} className="glass-btn p-1" />
             </Link>
           </div>

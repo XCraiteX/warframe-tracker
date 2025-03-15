@@ -1,6 +1,6 @@
 'use client';
 import { API_URL } from '@/config';
-import { FrameProps } from '@/interfaces/warframe/frame.props';
+import { FrameProps } from '@/interfaces/frame.props';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
