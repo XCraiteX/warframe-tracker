@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BG */
+
+.bg {
+  background: url('/warframe/bg.jpg');
+}
+
+#avatar {
+  background: url('https://avatars.mds.yandex.net/i?id=70580b601f0ae1047d1a99d20294fe6f_l-10677603-images-thumbs&n=13');
+}
+
+.warf-glass {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-btn {
+  transition: 0.2s;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.glass-btn:hover {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 8px 1px #fff;
+}
