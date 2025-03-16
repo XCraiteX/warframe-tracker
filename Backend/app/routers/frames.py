@@ -28,7 +28,7 @@ async def app_registration(request: Request):
         if not objects:
             return { 'status': 'Error' }
         
-        completed = (await db.execute(select(Warframes).filter(Warframes.completed == True and Warframes.user == email))).scalars().all()
+        completed = (await db.execute(select(Warframes).filter(Warframes.completed == True, Warframes.user == email))).scalars().all()
 
         return {
             "status": "OK",
@@ -57,7 +57,7 @@ async def app_update_part(props: UpdateProps, request: Request):
             obj.body = props.body
             obj.system = props.system
 
-            if obj.blueprint + obj.head + obj.body+ obj.system == 4:
+            if obj.blueprint and obj.head and obj.body and obj.system:
                 obj.completed = True
             else:
                 obj.completed = False
