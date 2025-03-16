@@ -62,4 +62,6 @@ async def app_update_part(props: UpdateProps, request: Request):
             else:
                 obj.completed = False
         
+        print(email + ' updated ' + props.warframe)
+
         await db.commit()

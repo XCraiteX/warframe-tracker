@@ -23,13 +23,13 @@ export default function Header() {
   });
 
   return (
-    <header className="flex fixed w-full z-50 bg-white/20 p-2 backdrop-blur-sm justify-between">
-      <div className="flex items-center">
+    <header className="flex fixed w-full z-50 bg-white/20 py-2 px-6 backdrop-blur-sm justify-between">
+      <div className="flex items-center w-[30%]">
         <h2 className="text-xl">WARFRAME TRACKER</h2>
       </div>
 
       {auth && (
-        <nav className="text-lg flex gap-6 items-center">
+        <nav className="text-lg flex gap-6 items-center w-[30%] justify-center">
           <Link href="/frames" className="text-xl glass-btn px-3 py-1">
             Фреймы
           </Link>
@@ -39,7 +39,7 @@ export default function Header() {
         </nav>
       )}
 
-      <div className="items-center flex gap-2">
+      <div className="items-center flex gap-2 w-[30%] justify-end">
         {auth ? (
           <>
             <h2 className="text-xl">{login}</h2>
