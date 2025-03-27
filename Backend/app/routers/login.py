@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Request, Response
-from fastapi.exceptions import HTTPException
 from sqlalchemy import select
 
 from config import API_URL
-from utils.hash import hash_string, check_hashes
+from utils.hash import hash_string
 from utils.generator import generate_session_key
 from services.auth import check_auth
 from services.init import init_frames
@@ -55,7 +54,7 @@ async def app_registration(props: RegistrationProps):
 @router.get(API_URL + '/auth')
 async def app_check_auth(request: Request):
 
-    status, email, login = await check_auth(request)
+    status, _, login = await check_auth(request)
 
     if not status:
         return { 'status': 'Error' }

@@ -1,15 +1,11 @@
-from fastapi import APIRouter, Request, Response
-from fastapi.exceptions import HTTPException
-from sqlalchemy import select, text, update, insert
+from fastapi import APIRouter, Request
+from sqlalchemy import select
 
 from config import API_URL
-from utils.hash import hash_string, check_hashes
-from utils.generator import generate_session_key
 from services.auth import check_auth
-from services.init import init_frames
 
-from data.schemas import RegistrationProps, LoginProps, UpdateProps
-from data.models import Users, Warframes
+from data.schemas import UpdateProps
+from data.models import Warframes
 
 from data.db import session
 
